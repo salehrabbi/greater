@@ -4,4 +4,102 @@ block title
   title Home
 
 block main
-  
+  section.banner
+    #bannerIndicators.carousel.slide.banner-slider(data-ride='carousel')
+      .carousel-inner
+        .carousel-item.active(style="background: url(dist/images/banner-1.png)")
+        .carousel-item(style="background: url(dist/images/banner-2.png)")
+        .carousel-item(style="background: url(dist/images/banner-3.png)")
+      //- a.arrow.left(href='#bannerIndicators' role='button' data-slide='prev')
+        <i class="far fa-angle-left"></i>
+      //- a.arrow.right(href='#bannerIndicators' role='button' data-slide='next')
+        <i class="far fa-angle-right"></i>
+      ol.carousel-indicators
+        li.active(data-target='#bannerIndicators' data-slide-to='0')
+        li(data-target='#bannerIndicators' data-slide-to='1')
+        li(data-target='#bannerIndicators' data-slide-to='2') 
+  section.service
+    .container
+      .row
+        each val, index in ['Our Mission', 'Our Vision', 'Community']
+          .col-lg-4.mb-4.mb-lg-0 
+            .item.text-center(class="item-"+index)
+              .img.d-flex.align-items-end.justify-content-center
+                img(src="dist/images/service-"+index+".png" alt="")
+              div
+                a.title.d-inline-block.text-decoration-none(href="#")= val
+              p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. 
+              div
+                a(href="#")  View more
+  section.welcome.position-relative
+    .text-center.text-xl-right        
+      img.welcome-img(src="dist/images/welcome.png" alt="")
+    .container
+      .row
+        .col-xl-8.col-12
+          h2
+            span.font-weight-light Welcome to
+            br
+            b Greater Works Fellowship
+          .text(style="max-width: 682px;") Dr. Noel G. L. Hutchinson, Jr. was recently named Mission Director for the Progressive National Baptist Convention (PNBC). He is also the organizer and founder of a new ministry, Greater Works Fellowship, and was the pastor of First Baptist Church Lauderdale in Memphis, Tennessee for 22 years. A native of The Bronx, New York, he obtained his Bachelor of Arts degree from Brandeis University in the areas of Sociology and American Studies, a Master of Divinity cum laude from Drew Theological School, and a Doctor of Ministry degree from United Theological Seminary in Trotwood, Ohio.    
+          h4.text-right 
+            b Dr. Noel G. L. Hutchinson, Jr.
+            br
+            span.font-weight-normal Senior Pastor
+
+  section.ministrie
+    .container
+      .row
+        .col-12
+          .section-heading.text-center.white.mx-auto(style="max-width: 415px;")
+            h2 Outreach Ministries
+            p Greater works fellowship Memphis, Tennessee JOIN THE MOVEMENT!
+      .content-wraper
+        each val, index in ['Men’s Ministry', 'Music Ministry', 'Missionary Society','Children’s Ministry','Young Adult Ministry','Box Outreach Ministry']
+          .item.text-center(class="item-"+index) 
+            .img.d-flex.align-items-start.justify-content-center
+              img(src="dist/images/m-"+index+".png" alt="")    
+            .title= val          
+  section.gallery
+    .container
+      .row
+        .col-12
+          .section-heading.text-center.mx-auto(style="max-width: 890px")
+            h2 Ministry Gallery
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas       
+      .row
+        .col-md-4
+          .img
+            img(src="dist/images/g-0.png" alt="")
+        .col-md-4
+          .row
+            .col-12
+              .img
+                img(src="dist/images/g-1.png" alt="")   
+              .img
+                img(src="dist/images/g-3.png" alt="")  
+        .col-md-4
+          .img  
+            img(src="dist/images/g-2.png" alt="")    
+  section.event
+    .container
+      .row
+        .col-12
+          .section-heading.text-center
+            h2 Upcoming Events               
+      #eventIndicators.carousel.slide.event-slider(data-ride='carousel')
+        .carousel-inner.mx-auto(style="max-width:1028px")
+          .carousel-item.active
+            img.d-block.w-100(src='dist/images/e-1.png' alt='First slide')
+          .carousel-item
+            img.d-block.w-100(src='dist/images/e-2.jpg' alt='Second slide')
+          .carousel-item
+            img.d-block.w-100(src='dist/images/e-3.jpg' alt='Third slide')
+        a.arrow.left(href='#eventIndicators' role='button' data-slide='prev')
+          <i class="far fa-angle-left"></i>
+        a.arrow.right(href='#eventIndicators' role='button' data-slide='next')
+          <i class="far fa-angle-right"></i>
+        ol.carousel-indicators
+          li.active(data-target='#eventIndicators' data-slide-to='0')
+          li(data-target='#eventIndicators' data-slide-to='1')
+          li(data-target='#eventIndicators' data-slide-to='2')  

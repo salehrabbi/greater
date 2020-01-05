@@ -1,0 +1,40 @@
+* {
+  outline: 0 !important;
+}
+img {
+  max-width: 100%;
+}
+.section-heading {
+  margin-bottom: 70px;
+  @include md {
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-family: $p;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    color: #003266;
+    @include md {
+      font-size: 25px;
+    }
+  }
+  p {
+    font-size: 20px;
+    line-height: (30/20);
+    margin: 0;
+    color: #333333;
+    font-family: $n;
+    margin-top: (35px - 15);
+    @include md {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  }
+  &.white {
+    h2,
+    p {
+      color: #fff;
+    }
+  }
+}

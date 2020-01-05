@@ -1,0 +1,42 @@
+footer.main-footer
+  .mx-auto(style="max-width: 1594px")
+    .container-fluid
+      .row
+        .col-lg-3.col-md-6.col-sm-6
+          .widget.widget-1.mt-0
+            a(href="#")
+              img(src="dist/images/footer-logo.png" alt="")
+        .col-lg-3.col-md-6.col-sm-6
+          .widget.widget-2
+            p.mb-4 
+              | 682 South Lauderdale Street, Memphis, TN 38126 901-523-0501    
+            .social-icon
+              a(href="#")
+                <i class="fab fa-facebook-f"></i>
+              a(href="#")
+                <i class="fab fa-twitter"></i>
+              a(href="#")
+                <i class="fab fa-pinterest-p"></i>
+              a(href="#")
+                <i class="fab fa-instagram"></i>     
+        .col-lg-3.col-md-6
+          .widget.widget-3
+            h3 Quick Links
+            .row.m-0
+              .col-6.p-0
+                ul
+                  each val, index in ['Home', 'About Us', 'Pastor','MINIstries']
+                    li
+                      a(href="#")= val   
+              .col-6.p-0
+                ul
+                  each val, index in ['EVENT', 'Sermons', 'Contact','GIVE']
+                    li
+                      a(href="#")= val         
+        .col-lg-3.col-md-6
+          .widget.widget-4.ml-lg-auto   
+            h3 Subscribe to our Newsletter
+            form.newsletter(action="#")
+              input(type="text" placeholder="Enter your email")
+              button(type="submit") SUBSCRIBE  
+      .copyright.text-center.text-lg-left © 2020 Greater Works Fellowship                        

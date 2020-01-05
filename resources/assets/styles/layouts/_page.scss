@@ -1,0 +1,288 @@
+.banner {
+  .carousel-item {
+    min-height: 100vh;
+    background-size: cover !important;
+  }
+  .carousel-indicators {
+    justify-content: flex-start;
+    margin-left: 9%;
+    li {
+      width: 30px;
+      height: 5px;
+      border-radius: 5px;
+      border: none;
+      background-color: rgba(#deb668, 0.45);
+      &.active {
+        width: 70px;
+        background-color: #f7cf29;
+      }
+    }
+  }
+}
+// ================================== .service/
+.service {
+  padding-top: 17px;
+  padding-bottom: 95px;
+  @include md {
+    padding-bottom: 50px;
+  }
+  .item {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
+    border-bottom: 3px solid #003266;
+    padding: 25px;
+    transition: 0.3s;
+    &:hover {
+      background: #003266;
+      border-color: #003266;
+      .title,
+      p {
+        color: #fff;
+      }
+      a {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .img {
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+    .title {
+      font-size: 30px;
+      letter-spacing: -0.6px;
+      font-weight: 600;
+      font-family: $m;
+      margin-top: 15px;
+      margin-bottom: 24px;
+    }
+    .img {
+      height: 94px;
+    }
+    p {
+      font-size: 16px;
+      color: #4c4c4c;
+      font-family: $o;
+    }
+    a {
+      color: #009999;
+    }
+    &-0 {
+      border-color: #003266;
+      .title {
+        color: #003266;
+      }
+    }
+    &-1 {
+      border-color: #cd3333;
+      .title {
+        color: #cd3333;
+      }
+    }
+    &-2 {
+      border-color: #009999;
+      .title {
+        color: #009999;
+      }
+    }
+  }
+}
+
+// ======================================= .welcome
+.welcome {
+  padding-bottom: 50px;
+  .welcome-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: em(573px);
+    height: em(626px);
+    @include rwd(1920) {
+      font-size: 17px;
+    }
+    @include rwd(1620) {
+      font-size: 15px;
+    }
+    @include rwd(1366) {
+      font-size: 13px;
+    }
+    @include xl {
+      position: static;
+      text-align: center;
+      margin-bottom: 40px;
+      // height: auto;
+      // width: auto;
+      font-size: 9px;
+    }
+  }
+  h2 {
+    color: #003266;
+    font-size: 40px;
+    margin-bottom: 55px;
+    font-family: $p;
+    @include md {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    span {
+      font-size: 36px;
+      @include md {
+        font-size: 25px;
+      }
+    }
+  }
+  .text {
+    font-size: 24px;
+    font-family: $n;
+    color: #333333;
+    line-height: (36/24);
+    margin-bottom: 50px;
+    @include md {
+      font-size: 18px;
+    }
+  }
+  h4 {
+    color: #003266;
+    font-family: $p;
+    font-size: 24px;
+    @include md {
+      font-size: 20px;
+    }
+  }
+}
+// =================================== .ministrie
+.ministrie {
+  background-color: #009999;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  @include md {
+    padding: 50px 0;
+  }
+  .section-heading {
+    margin-bottom: 130px;
+    @include md {
+      margin-bottom: 50px;
+    }
+  }
+  .content-wraper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include sm {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .item {
+    padding-bottom: 60px;
+    border-right: 1px solid #fff;
+    transition: 0.3s;
+    @include sm {
+      border: none;
+    }
+    &:hover {
+      img {
+        filter: brightness(1) invert(1);
+      }
+      .title {
+        color: #000;
+      }
+    }
+    &-2,
+    &-5 {
+      border: none;
+    }
+    &-3,
+    &-4,
+    &-5 {
+      padding-bottom: 0;
+    }
+    .img {
+      height: 69px;
+      margin-bottom: 25px;
+    }
+    .title {
+      font-size: 24px;
+      font-family: $m;
+      color: #ffffff;
+      font-weight: 600;
+      @include lg {
+        font-size: 20px;
+      }
+      @include md {
+        font-size: 16px;
+      }
+    }
+  }
+}
+// ===================================== .gallery
+.gallery {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  @include md {
+    padding: 50px 0;
+  }
+  .img {
+    padding: (30px/2) 0;
+    @include xl {
+      padding: 11px 0;
+    }
+    @include lg {
+      padding: 8px 0;
+    }
+    img {
+      width: 100%;
+      border: 4px solid #f7cf29;
+    }
+  }
+}
+// ======================================== .event
+.event {
+  padding-top: 30px;
+  padding-bottom: 150px;
+  background-color: #f2f2f2;
+  @include md {
+    padding: 50px 0;
+  }
+  .event-slider {
+    .arrow {
+      font-size: 30px;
+      color: #c0c0c0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: (-45px/2);
+      @include xl {
+        left: 15px;
+      }
+      &:hover {
+        color: #6d8aa7;
+      }
+      &.right {
+        left: auto;
+        right: 0;
+        @include xl {
+          right: 15px;
+        }
+      }
+    }
+    .carousel-indicators {
+      padding: 0;
+      margin: 0;
+      bottom: -70px;
+      @include md {
+        bottom: -40px;
+      }
+      li {
+        width: 12px;
+        height: 12px;
+        background-color: #c0c0c0;
+        border-radius: 50%;
+        margin-left: 4px;
+        margin-right: 4px;
+        &.active {
+          background-color: #f8cc2b;
+        }
+      }
+    }
+  }
+}

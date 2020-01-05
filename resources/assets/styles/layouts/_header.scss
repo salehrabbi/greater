@@ -1,0 +1,71 @@
+.main-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  .nav-item {
+    padding: 5px 10px;
+  }
+  .nav-link {
+    padding: 0 !important;
+    font-size: 18px;
+    font-family: $p;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-bottom: 1px solid transparent;
+    @include xl {
+      color: #fdd12b;
+    }
+    &.active,
+    &:hover {
+      color: #fdd12b;
+      border-bottom: 1px solid #fdd12b;
+    }
+  }
+}
+// ================================= mobile menu
+
+@include xl {
+  body {
+    &.active {
+      height: 100vh;
+      overflow: hidden;
+      #navbarSupportedContent {
+        left: 0;
+      }
+    }
+  }
+  #navbarSupportedContent {
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 999;
+    width: 272px; /*example + never use min-width with this solution */
+    height: 100vh;
+    background: #182635;
+    display: block;
+    transition: 0.5s;
+  }
+  .overlay-full.active {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    top: 0;
+    display: block;
+  }
+  .navbar-toggler {
+    color: #fff;
+  }
+}
+.navbar-collapse {
+  @include xl {
+    background: #fff;
+  }
+}
