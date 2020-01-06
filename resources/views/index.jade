@@ -7,7 +7,8 @@ block main
   section.banner
     #bannerIndicators.carousel.slide.banner-slider(data-ride='carousel')
       .carousel-inner
-        .carousel-item.active(style="background: url(dist/images/banner-1.png)")
+        .carousel-item.active(style="background: url(dist/images/banner-4.png)")
+        .carousel-item(style="background: url(dist/images/banner-1.png)")
         .carousel-item(style="background: url(dist/images/banner-2.png)")
         .carousel-item(style="background: url(dist/images/banner-3.png)")
       //- a.arrow.left(href='#bannerIndicators' role='button' data-slide='prev')
@@ -18,6 +19,7 @@ block main
         li.active(data-target='#bannerIndicators' data-slide-to='0')
         li(data-target='#bannerIndicators' data-slide-to='1')
         li(data-target='#bannerIndicators' data-slide-to='2') 
+        li(data-target='#bannerIndicators' data-slide-to='3') 
   section.service
     .container
       .row
